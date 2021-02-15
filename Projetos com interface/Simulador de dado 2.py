@@ -39,4 +39,3 @@ class simulador_de_dado():
 
 simulador = simulador_de_dado()
 simulador.inicio()
-© 2021 GitHub, Inc.
