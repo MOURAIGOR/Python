@@ -11,7 +11,7 @@ while chance != random:
         chance = chance - 1
         if chute == random:
             print('')
-            print('Uhruuuuu! Você acetou o número era {} e tinha {} tentativas'.format(random, chance))
+            print('Uhruuuuu! Você acertou o número era {} e tinha {} tentativas'.format(random, chance))
             print(' ')
             break
 
