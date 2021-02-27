@@ -1,10 +1,11 @@
 class Pessoa:
+    #Atributos
     def __init__(self, nome="Pessoa", idade=0 , altura=0.0 , peso=0):
         self.nome = nome
         self.idade = idade
         self.altura = altura
         self.peso = peso
-
+    #Metodos
     def crescer(self, cm):
         
         self.altura += cm / 100
@@ -33,6 +34,7 @@ class Pessoa:
         print("{} agora você está com {} anos de idade".format(self.nome, self.idade))
         self.crescer(cresc) 
 
+#executando
 def main():
     Lucas = Pessoa("Lucas", 21, 1.50, 65)
 

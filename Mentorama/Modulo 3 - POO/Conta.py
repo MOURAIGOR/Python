@@ -1,10 +1,11 @@
 class conta_corrente:
+    #atributos
     def __init__ (self, cliente, numero_conta, saldo):
         self.cliente = cliente
         self.saldo = saldo
         self.numero_da_conta = numero_conta 
 
-    
+    #Metodos 
     def sacar(self, valor):
         if(self.saldo < valor):
             print('*** Não tem saldo para saque! ***')
@@ -23,6 +24,7 @@ class conta_corrente:
             print('\nO valor de R${} foi depositado com sucesso'.format(valor),)
             print(' \nO seu saldo atual é R${:.2f}'.format(self.saldo))
 
+# executando 
 def main():
     cliente01 = conta_corrente("João", 274313-2, 100)
     resposta = ''

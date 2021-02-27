@@ -1,9 +1,11 @@
 class Ball: 
+    #Atributos
     def __init__(self, color="", circunf=0, material=""):
         self.color = color
         self.circunf = circunf
         self.material = material
 
+    #metodos
     def troca_Cor(self):
         troca = input("Deseja mudar a cor atual {}? [s/n]".format(self.color))
         
@@ -20,6 +22,7 @@ class Ball:
     def mostrar_Cor(self):
         print("\n A cor atual é {}".format(self.color))
 
+# Executando
 def main():
     bola01 = Ball("Azul", 5, "Borracha") 
 

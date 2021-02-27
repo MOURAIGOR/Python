@@ -13,9 +13,7 @@ class Carro:
         self.velocidade = 0
 
     def ligar(self):
-        print("checando o sistema")
-        print("...3...2...1")
-        print("Seu {} ligou, sistemas ok ")
+        print("Ligado")
 
     def buzinar(self):
         print("Bi-bi, Bi-bi")

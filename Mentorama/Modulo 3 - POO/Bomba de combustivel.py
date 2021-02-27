@@ -1,5 +1,5 @@
 class Bomba_de_combustivel:
-
+    #Atributos
     def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
         self.tipoCombustivel = tipoCombustivel
         self.quantidadeCombustivel = quantidadeCombustivel
@@ -27,7 +27,7 @@ class Bomba_de_combustivel:
         self.valorLitro = novoPreço
         print("Preço alterado para R$ %.2f" %novoPreço)
 
-
+# Operando a bomba de combustivel
 def main():
     bomba01 = Bomba_de_combustivel('Gasolina', 3.99, 2.000)
     bomba02 = Bomba_de_combustivel('Etanol', 2.59, 1.500)
@@ -56,7 +56,7 @@ def main():
                 bomba01.alterarQuantidadeCombustivel(Novaquantidade)
 
             else:
-                print('Digite apenas as fornecidas')
+                print("Digite apenas as opções fornecidas")
 
         elif (resp == 'Etanol'):
             resp2 = str(
@@ -78,7 +78,7 @@ def main():
                 bomba02.alterarQuantidadeCombustivel(Novaquantidade)
 
             else:
-                print('Digite apenas as fornecidas')
+                print('Digite apenas as opções fornecidas')
 
         elif (resp == 'Disiel'):
             resp2 = str(
@@ -100,5 +100,5 @@ def main():
                 bomba03.alterarQuantidadeCombustivel(Novaquantidade)
 
             else:
-                print('Digite apenas as fornecidas')
+                print('Digite apenas as opções fornecidas')
 main()

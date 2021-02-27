@@ -1,61 +1,30 @@
 class Retangulo:
-    def __init__(self, comprimento = "0", largura = "0"):
+    # Atributos
+    def __init__(self, comprimento, altura):
+        self.setcomprimento(comprimento)
+        self.setAltura(altura)
+    # Métodos
+    def setcomprimento(self, comprimento):
         self.comprimento = comprimento
-        self.largura = largura
 
-    @property
-    def comprimento(self):
-        return self.__comprimento
+    def getcomprimento(self):
+        return self.comprimento
 
-    @comprimento.setter
-    def comprimento (self, valor):
+    def setAltura(self, altura):
+        self.altura = altura
 
-        if valor.isdigit():
-            self.__comprimento = valor
+    def getAltura(self):
+        return self.altura
 
-        else:
-            print("Insira apenas numeros")
+    def calculaArea(self):
+        return self.comprimento * self.altura
 
-    @property
-    def largura(self):
-        return self.__largura
+    def calculaPerimetro(self):
+        return 2 * self.comprimento + 2 * self.altura
 
-    @largura.setter
-    def largura(self, valor):
-
-        if valor.isdigit():
-            self.__largura = valor
-
-        else:
-            print("Insira apenas numeros")
-
-    def mudarValor(self):
-        C = input("\nCompromento: ")
-        self.comprimento = C
-
-        L = input("\nLargura: ")
-        self.largura = L
-
-    def mostrarValor(self):
-        print("\n--- Retangulo ---")
-        print("Comprimento: {}".format(self.comprimento))
-        print("Largura: {}".format(self.largura))
-        print("-------------------")
-
-    def calcArea(self):
-        print("\nA área do retangulo é {} m2".format(float(self.__comprimento) * float(self.__largura)))
-   
-    def caclPerimetro(self):
-        print("O perimetro é {} m2".format((float(self.__comprimento) * 2 ) + (float(self.__largura)* 2)))
-
-def main():
-    r = Retangulo()
-    r.mostrarValor()
-    
-    r.mudarValor()
-    r.mostrarValor()
-
-    r.calcArea()
-    r.caclPerimetro()
-
-main()             
+# Executando
+comprimento = int(input('Valor do comprimento: '))
+altura = int(input('Valor da altura: '))
+retangulo = Retangulo(comprimento, altura)
+print('A area do retangulo é: %d' % retangulo.calculaArea())
+print('O perimetro do retangulo é : %d' % retangulo.calculaPerimetro())

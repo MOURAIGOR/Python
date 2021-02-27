@@ -1,45 +1,29 @@
 class Quadrado:
-    def __init__(self, lado="0"):
-        self.lado = lado
+    def __init__(self, lado):
+        self.tamanho_lado = lado
 
-    @property
-    def lado(self):
-        return self.__lado
+    def mudar_valor_lado(self, novo_lado):
+        lado = novo_lado
+        self.tamanho_lado = novo_lado
 
-    @lado.setter
-    def lado(self, valor):
+    def retornar_valor_lado(self, retorno):
+        self.tamanho_lado = retorno
+        print(retorno)
 
-        if valor.isdigit():
-            self.__lado = valor
-        else:
-            print("O valor do lado deve ser apenas em numeros")
+    def calcular_area(self, area):
+        self.tamanho_lado = area
+        print(area*area)
 
-    def valorLado(self):
-        print("\nO valor do lado é {} cm".format(self.__lado))
-
-    def mudarLado(self):
-        novoLado = input("\nMudar lado de {} cm para: ".format(self.__lado))
-        self.lado = novoLado
-
-    def calcArea(self):
-        print("\nA área do quadrado é {:.2f} cm²".format(
-            float(self.__lado) * float(self.__lado)))
-
-    def __str__(self):
-        return "O quadrado possui {} cm de lado e {:.2f} cm² de area".format(
-            self.__lado, float(self.__lado) * float(self.__lado))
-
-
-def main():
-    quadradoA = Quadrado()
-    lado = input("Insira o valor do lado: ")
-    quadradoA.lado = lado
-
-    print(quadradoA)
-
-    quadradoA.mudarLado()
-    quadradoA.valorLado()
-    quadradoA.calcArea()
-
-
-main()
+quadrado = Quadrado(6)
+print('Tamanho atual é:')
+print(quadrado.tamanho_lado)
+print('----------------')
+quadrado.mudar_valor_lado(3)
+print('Novo tamanho é:')
+print(quadrado.tamanho_lado)
+print('----------------')
+print('Tamanho atual:')
+quadrado.retornar_valor_lado(3)
+print('----------------')
+print('Total da area ficou em :')
+quadrado.calcular_area(3)
